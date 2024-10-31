@@ -20,6 +20,7 @@ pipeline {
             steps {
                 script {
                     // Set up virtual environment
+                    sh "python3 --version"
                     sh "python3 -m venv ${VENV_DIR}"
                     sh "${VENV_DIR}/bin/pip install --upgrade pip setuptools wheel"
                 }
